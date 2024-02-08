@@ -1,4 +1,6 @@
 import { Container } from 'react-bootstrap';
+import { Formulario } from './components/Formulario';
+
 const App = () => {
   return (
     <>
@@ -9,7 +11,7 @@ const App = () => {
 
 
       <Container className='mt-5'>
-        2
+        <Formulario />
       </Container>
     </>
   );
