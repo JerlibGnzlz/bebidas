@@ -27,10 +27,7 @@ export const Formulario = () => {
                             name="categoria"
                         >
                             <option>-Selecciona Categoria-</option>
-                            <option>-Selecciona Categoria-</option>
-                            <option>-Selecciona Categoria-</option>
-                            <option>-Selecciona Categoria-</option>
-                            <option>-Selecciona Categoria-</option>
+
                         </Form.Select>
 
                     </Form.Group>
