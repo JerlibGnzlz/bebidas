@@ -1,21 +1,25 @@
-import axios from "axios"
-import { createContext, useEffect, useState } from 'react'
+import axios from "axios";
+import { createContext, useEffect, useState } from 'react';
 
-export const CategoriasContext = createContext()
+export const CategoriasContext = createContext();
 
 export const CategoriasProvider = ({ children }) => {
 
 
     const obtenerCategorias = async () => {
+        try {
 
-        const url = "www.thecocktaildb.com/api/json/v1/1/list.php?c=list"
-        const { data } = await axios(url)
-        console.log(data)
-    }
-
+            const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
+            const { data } = await axios(url);
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
     useEffect(() => {
-        obtenerCategorias()
-    }, [])
+        obtenerCategorias();
+    }, []);
+
 
     return (
         <CategoriasContext.Provider value={{
@@ -24,5 +28,5 @@ export const CategoriasProvider = ({ children }) => {
 
             {children}
         </CategoriasContext.Provider>
-    )
-}
+    );
+};
